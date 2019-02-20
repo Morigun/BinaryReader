@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BinaryReader"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Байт декодер" Height="426.389" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="32"/>
+        </Grid.RowDefinitions>
+        <RichTextBox Grid.ColumnSpan="5" Name="InputRTB" Margin="8"/>
+        <RichTextBox Grid.Row="1" Grid.ColumnSpan="5" Name="OutputRTB" Margin="8" IsReadOnly="True"/>
+        <Button Grid.Row="2" Content="Decode" Click="Button_Click" Margin="5"/>
+        <Button Grid.Row="2" Grid.Column="1" Content="Encode" Click="Button_Click_1" Margin="5"/>
+        <CheckBox Grid.Row="2" Grid.Column="2" Name="CompressedCB" Content="Сжатый" Margin="5"/>
+        <ComboBox Grid.Row="2" Grid.Column="3" Name="EncodingCB" Margin="5"/>
+        <CheckBox Grid.Row="2" Grid.Column="4" Name="AllCB" Content="По всем" Margin="5"/>
     </Grid>
 </Window>
